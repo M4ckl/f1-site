@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #15151F;
+    background-image: linear-gradient(to bottom, #15151F, #35354E);
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+}

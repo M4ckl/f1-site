@@ -1,0 +1,81 @@
+.header-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.team-logo-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+}
+
+.team-titles h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sub-label {
+    font-size: 10px;
+    color: #888;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-family: 'Orbitron', sans-serif;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 10px;
+    color: #aaa;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.season-stat {
+    margin-top: 20px;
+}
+
+.stat-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.stat-value.highlight {
+    color: var(--team-color);
+    text-shadow: 0 0 15px var(--team-color);
+}
+
+.ui-progress-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    transform: skewX(-20deg);
+    overflow: hidden;
+}
+
+.ui-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--team-color);
+    box-shadow: 0 0 15px var(--team-color);
+    transition: width 1s ease-out, background 0.3s;
+}

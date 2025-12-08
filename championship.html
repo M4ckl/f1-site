@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>F1 Constructors Championship</title>
+    <link rel="icon" type="image/svg+xml" href="https://upload.wikimedia.org/wikipedia/commons/3/33/F1.svg">    
+    <link rel="stylesheet" href="style/preloader.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/championship/base.css">
+    <link rel="stylesheet" href="style/championship/champion.css">
+    <link rel="stylesheet" href="style/championship/header.css">
+    <link rel="stylesheet" href="style/championship/layout.css">
+    <link rel="stylesheet" href="style/championship/team-card.css">
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="speedometer-container" id="speed-container">
+            <svg class="gauge-svg" viewBox="0 0 200 200">
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#00ffcc" />
+                        <stop offset="50%" stop-color="#ffcc00" />
+                        <stop offset="100%" stop-color="#ff0055" />
+                    </linearGradient>
+                </defs>
+                <circle class="circle-bg" cx="100" cy="100" r="80" stroke-dasharray="376" stroke-dashoffset="0" />
+                <circle id="progress-bar" class="circle-progress" cx="100" cy="100" r="80" />
+            </svg>
+            <div class="digital-readout">
+                <span id="gear-display" class="gear">N</span>
+                <span id="speed-display" class="speed-value">0</span>
+                <span class="unit">KM/H</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <header>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/F1.svg" alt="Logo" class="logo">
+            <div class="header-line"></div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="teams.html">Teams</a>
+                <a href="drivers.html">Drivers</a>
+            </nav>
+            <div class="header-line"></div>
+        </header>
+
+        <div class="constructors-page-container">
+            
+            <div class="page-header">
+                <h1>2025 CONSTRUCTORS</h1>
+                <span>STANDINGS</span>
+            </div>
+
+            <div class="constructors-list" id="constructors-list"></div>
+            
+        </div>
+    </div>
+
+    <script type="module" src="script/preloader.js"></script>
+    <script src="script/championship.js"></script>
+</body>
+</html>

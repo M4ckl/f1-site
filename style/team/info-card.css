@@ -1,0 +1,67 @@
+.team-details-container {
+    position: absolute;
+    top: 120px;
+    left: 60px;
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    perspective: 1000px;
+
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        opacity 0.5s ease;
+
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.team-details-container.ui-hidden {
+    opacity: 0;
+    transform: translateX(-100px) rotateY(20deg);
+    pointer-events: none;
+}
+
+.info-card-3d {
+    background: rgba(23, 23, 34, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    position: relative;
+    transform-origin: left center;
+    transform: rotateY(15deg);
+
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        border-color 0.3s,
+        box-shadow 0.3s,
+        opacity 0.5s;
+
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.info-card-3d:hover {
+    transform: rotateY(0deg) scale(1.02);
+
+    border-color: var(--team-color);
+    box-shadow: 0 0 25px var(--team-color), inset 0 0 20px rgba(0, 0, 0, 0.2);
+
+    z-index: 100;
+    cursor: pointer;
+}
+
+.info-card-3d.hidden-state {
+    opacity: 0;
+    transform: translateX(-50px) rotateY(45deg);
+    pointer-events: none;
+}
+
+.info-card-3d::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--team-color);
+    box-shadow: 0 0 10px var(--team-color);
+    transition: background 0.3s;
+}

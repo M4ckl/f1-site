@@ -1,0 +1,15 @@
+.constructors-page-container {
+    padding: 40px 60px 80px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.constructors-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

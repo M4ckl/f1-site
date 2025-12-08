@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>F1 Teams</title>
+    <link rel="icon" type="image/svg+xml" href="https://upload.wikimedia.org/wikipedia/commons/3/33/F1.svg">    
+    <link rel="stylesheet" href="style/preloader.css">
+    <link rel="stylesheet" href="style/team/layout.css">
+    <link rel="stylesheet" href="style/team/controls.css">
+    <link rel="stylesheet" href="style/team/info-card.css">
+    <link rel="stylesheet" href="style/team/team-drivers.css">
+    <link rel="stylesheet" href="style/team/team-stats.css">
+    <link rel="stylesheet" href="style/header.css">
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="preloader" data-mode="real">
+        <div class="speedometer-container" id="speed-container">
+            <svg class="gauge-svg" viewBox="0 0 200 200">
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#00ffcc" />
+                        <stop offset="50%" stop-color="#ffcc00" />
+                        <stop offset="100%" stop-color="#ff0055" />
+                    </linearGradient>
+                </defs>
+                <circle class="circle-bg" cx="100" cy="100" r="80" stroke-dasharray="376" stroke-dashoffset="0" />
+                <circle id="progress-bar" class="circle-progress" cx="100" cy="100" r="80" />
+            </svg>
+            <div class="digital-readout">
+                <span id="gear-display" class="gear">N</span>
+                <span id="speed-display" class="speed-value">0</span>
+                <span class="unit">KM/H</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="ui-layer">
+        <header>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/F1.svg" alt="Logo" class="logo">
+            <div class="header-line"></div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="drivers.html">Drivers</a>
+                <a href="/championship.html">Championship</a>
+            </nav>
+            <div class="header-line"></div>
+        </header>
+
+        <div class="team-details-container" id="team-info-panel">
+
+            <div class="info-card-3d header-card">
+                <img id="team-logo" src="" alt="Team Logo" class="team-logo-img">
+                <div class="team-titles">
+                    <h2 id="team-name">TEAM NAME</h2>
+                    <span id="team-base" class="sub-label">MARANELLO, ITALY</span>
+                </div>
+            </div>
+
+            <div class="info-card-3d stats-card">
+                <div class="stat-row">
+                    <span class="stat-label">CHAMPIONSHIPS</span>
+                    <span class="stat-value" id="stat-titles">0</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">RACE WINS</span>
+                    <span class="stat-value" id="stat-wins">0</span>
+                </div>
+                <div class="season-stat">
+                    <div class="stat-header">
+                        <span class="stat-label">2025 POINTS</span>
+                        <span class="stat-value highlight" id="stat-points">0</span>
+                    </div>
+                    <div class="ui-progress-bar">
+                        <div class="ui-progress-fill" id="team-points-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="drivers-container">
+                <div class="info-card-3d driver-card">
+                    <img id="d1-img" src="" alt="Driver 1" class="driver-photo">
+                    <div class="driver-meta">
+                        <span class="driver-num" id="d1-num">00</span>
+                        <span class="driver-name" id="d1-name">NAME</span>
+                        <span class="driver-pts" id="d1-pts">0 PTS</span>
+                    </div>
+                </div>
+
+                <div class="info-card-3d driver-card">
+                    <img id="d2-img" src="" alt="Driver 2" class="driver-photo">
+                    <div class="driver-meta">
+                        <span class="driver-num" id="d2-num">00</span>
+                        <span class="driver-name" id="d2-name">NAME</span>
+                        <span class="driver-pts" id="d2-pts">0 PTS</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="navigation-controls">
+            <button id="arrow-left" class="cyber-nav-btn">
+                <svg viewBox="0 0 24 24">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+
+            <div class="nav-divider"></div>
+
+            <button id="arrow-right" class="cyber-nav-btn">
+                <svg viewBox="0 0 24 24">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+
+        <div class="rotation-control">
+            <span class="rot-label">360° VIEW</span>
+            <input type="range" id="rotation-slider" min="0" max="360" value="0">
+        </div>
+
+    </div>
+
+    <script type="module" src="script/teams.js"></script>
+    <script type="module" src="script/preloader.js"></script>
+</body>
+
+</html>

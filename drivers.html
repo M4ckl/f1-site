@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>F1 Drivers Championship</title>
+    <link rel="icon" type="image/svg+xml" href="https://upload.wikimedia.org/wikipedia/commons/3/33/F1.svg">
+    <link rel="stylesheet" href="style/preloader.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/drivers/base.css"> 
+    <link rel="stylesheet" href="style/drivers/drivers.css"> 
+    <link rel="stylesheet" href="style/drivers/driver-card.css"> 
+    <link rel="stylesheet" href="style/drivers/header.css"> 
+    <link rel="stylesheet" href="style/drivers/layout.css"> 
+    <link rel="stylesheet" href="style/drivers/modal.css"> 
+    <link rel="stylesheet" href="style/drivers/track.css"> 
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="speedometer-container" id="speed-container">
+            <svg class="gauge-svg" viewBox="0 0 200 200">
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#00ffcc" />
+                        <stop offset="50%" stop-color="#ffcc00" />
+                        <stop offset="100%" stop-color="#ff0055" />
+                    </linearGradient>
+                </defs>
+                <circle class="circle-bg" cx="100" cy="100" r="80" stroke-dasharray="376" stroke-dashoffset="0" />
+                <circle id="progress-bar" class="circle-progress" cx="100" cy="100" r="80" />
+            </svg>
+            <div class="digital-readout">
+                <span id="gear-display" class="gear">N</span>
+                <span id="speed-display" class="speed-value">0</span>
+                <span class="unit">KM/H</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <header>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/F1.svg" alt="Logo" class="logo">
+            <div class="header-line"></div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="teams.html">Teams</a>
+                <a href="championship.html">Championship</a>
+            </nav>
+            <div class="header-line"></div>
+        </header>
+
+        <div class="drivers-page-container">
+            
+            <div class="drivers-top-bar">
+                <div class="championship-title">
+                    <h1>2025 CHAMPIONSHIP</h1>
+                    <span>CURRENT STANDINGS</span>
+                </div>
+                
+                <button id="next-race-btn" class="next-race-btn">
+                    NEXT RACE
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="drivers-grid" id="drivers-grid"></div>
+            
+        </div>
+    </div>
+
+    <div id="track-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>UPCOMING EVENT</h2>
+                <button id="close-modal" class="close-btn">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="track-info">
+                    <span class="track-round">ROUND 23</span>
+                    <h1 class="track-name">QATAR GP</h1>
+                    <span class="track-date">28 - 30 NOV 2025</span>
+                </div>
+                
+                <div class="track-image-container">
+                    <img src="assets/img/qatar_f1.avif" alt="Track Map" class="track-map-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script/preloader.js"></script>
+    <script src="script/drivers.js"></script> 
+</body>
+</html>

@@ -1,0 +1,384 @@
+.cyber-btn {
+    position: relative;
+    padding: 10px 15px;
+    min-width: 50px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border: none;
+}
+
+.cyber-btn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.cyber-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid rgba(255, 255, 255, 0.8);
+    border-left: 2px solid rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.cyber-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+    border-right: 2px solid rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.cyber-btn:hover::before {
+    top: -6px;
+    left: -6px;
+    width: 20px;
+    height: 20px;
+    border-color: #ff0055;
+}
+
+.cyber-btn:hover::after {
+    bottom: -6px;
+    right: -6px;
+    width: 20px;
+    height: 20px;
+    border-color: #ff0055;
+}
+
+.sound-control {
+    gap: 4px;
+}
+
+.sound-control span {
+    display: block;
+    width: 3px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 1px;
+    transition: height 0.2s ease, background-color 0.2s;
+}
+
+.sound-control.active span {
+    background-color: #ff0055;
+    animation: equalizer-center 1s infinite ease-in-out;
+}
+
+.sound-control.active span:nth-child(1) {
+    animation-delay: 0.0s;
+}
+
+.sound-control.active span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.sound-control.active span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.sound-control.active span:nth-child(4) {
+    animation-delay: 0.1s;
+}
+
+.sound-control.active span:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.sound-control.active span:nth-child(6) {
+    animation-delay: 0.3s;
+}
+
+.sound-control.active span:nth-child(7) {
+    animation-delay: 0.15s;
+}
+
+.sound-control.active span:nth-child(8) {
+    animation-delay: 0.45s;
+}
+
+.media-toggle {
+    padding: 5px 15px;
+    height: 30px;
+    transition: all 0.3s ease;
+}
+
+.media-toggle svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+    transition: all 0.3s ease;
+    stroke: white;
+}
+
+.media-toggle:hover svg {
+    stroke: #ff0055;
+}
+
+.media-toggle.expanded {
+    padding: 10px 15px;
+    height: 44px;
+}
+
+.media-toggle.expanded svg {
+    width: 24px;
+    height: 24px;
+}
+
+.cyber-card {
+    position: relative;
+    background-color: rgba(23, 23, 34, 0.85);
+    backdrop-filter: blur(5px);
+}
+
+.info-card {
+    padding: 10px 15px;
+    min-width: auto;
+    width: fit-content;
+    max-width: 180px;
+}
+
+.winner-card {
+    padding: 25px 30px;
+    min-width: 260px;
+}
+
+.cyber-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.cyber-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    border-right: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.winner-card::before {
+    border-top-color: #ffcc00;
+    border-left-color: #ffcc00;
+}
+
+.winner-card::after {
+    border-bottom-color: #ffcc00;
+    border-right-color: #ffcc00;
+}
+
+.info-card .info-label {
+    font-size: 8px;
+    color: #888;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.info-card .info-value {
+    font-size: 11px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+    white-space: normal;
+    line-height: 1.2;
+}
+
+.info-card .info-divider {
+    height: 1px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 5px 0;
+}
+
+.winner-card .info-label {
+    font-size: 10px;
+    color: #888;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.driver-name {
+    font-size: 24px;
+    font-weight: 900;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.team-name {
+    font-size: 12px;
+    color: #ccc;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.winner-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-family: 'Consolas', monospace;
+    font-size: 14px;
+    color: #00ffcc;
+}
+
+.winner-time span {
+    color: #666;
+    font-size: 10px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.text-red {
+    color: #ff0055;
+    text-shadow: 0 0 5px rgba(255, 0, 85, 0.5);
+    animation: blink 2s infinite;
+}
+
+.cyber-card.minimized {
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: bottom left;
+    pointer-events: none;
+}
+
+.cyber-card {
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        opacity 0.5s ease,
+        min-width 0.5s ease,
+        padding 0.5s ease;
+}
+
+.content-champ.hidden {
+    display: none;
+}
+
+.content-champ {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.driver-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.d-info {
+    display: flex;
+    flex-direction: column;
+    width: 90px;
+    flex-shrink: 0;
+}
+
+.d-name {
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+}
+
+.d-team {
+    font-size: 8px;
+    text-transform: uppercase;
+}
+
+.d-team.rb { color: #3671C6; }
+.d-team.mcl { color: #FF8000; }
+
+.progress-container {
+    flex: 1;
+    min-width: 50px;
+    height: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.progress-fill {
+    display: block;
+    height: 100%;
+    width: 0%;
+    transition: width 1.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transform: skewX(-20deg);
+    border-radius: 0;
+}
+
+.rb-bg {
+    background-color: #3671C6;
+    box-shadow: 0 0 10px rgba(54, 113, 198, 0.6);
+}
+
+.mcl-bg {
+    background-color: #FF8000;
+    box-shadow: 0 0 10px rgba(255, 128, 0, 0.6);
+}
+
+.d-points {
+    margin-left: 10px;
+    width: 50px;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 700;
+    color: #00ffcc;
+    flex-shrink: 0;
+}
+
+.cyber-btn.tab-btn {
+    background-color: rgba(23, 23, 34, 0.95);
+    font-size: 10px;
+    font-weight: 700;
+    color: #888;
+    letter-spacing: 1px;
+
+    min-height: 28px;
+    padding: 6px 15px;
+}
+
+.cyber-btn.tab-btn:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cyber-btn.tab-btn.active {
+    background-color: #ffcc00;
+    color: #15151F;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+
+.cyber-btn.tab-btn.active::before {
+    border-top-color: #15151F;
+    border-left-color: #15151F;
+}
+
+.cyber-btn.tab-btn.active::after {
+    border-bottom-color: #15151F;
+    border-right-color: #15151F;
+}

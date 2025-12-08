@@ -1,0 +1,118 @@
+.navigation-controls {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 40px;
+    z-index: 50;
+}
+
+.cyber-nav-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    width: 60px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: skewX(-20deg);
+    transition: all 0.3s ease;
+}
+
+.cyber-nav-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    transform: skewX(20deg);
+    transition: transform 0.3s ease, stroke 0.3s;
+}
+
+.cyber-nav-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+#arrow-left:hover svg {
+    transform: skewX(20deg) translateX(-5px);
+    stroke: #ff0055;
+}
+
+#arrow-right:hover svg {
+    transform: skewX(20deg) translateX(5px);
+    stroke: #ff0055;
+}
+
+.nav-divider {
+    width: 2px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    transform: skewX(-20deg);
+}
+
+.rotation-control {
+    position: absolute;
+    bottom: 50px;
+    right: 60px;
+    z-index: 50;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+
+    pointer-events: auto;
+}
+
+.rot-label {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    color: #888;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 200px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    outline: none;
+    transition: background 0.3s;
+}
+
+input[type=range]:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 10px;
+    background: var(--team-color);
+    cursor: pointer;
+    border: 1px solid #fff;
+    transform: skewX(-20deg);
+    box-shadow: 0 0 10px var(--team-color);
+    transition: background 0.3s, transform 0.2s;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    transform: skewX(-20deg) scale(1.2);
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 20px;
+    height: 10px;
+    background: var(--team-color);
+    cursor: pointer;
+    border: 1px solid #fff;
+    transform: skewX(-20deg);
+    box-shadow: 0 0 10px var(--team-color);
+}

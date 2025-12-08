@@ -1,0 +1,11 @@
+.drivers-page-container {
+    padding: 40px 60px 80px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.drivers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}

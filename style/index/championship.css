@@ -1,0 +1,112 @@
+.content-champ.hidden {
+    display: none;
+}
+
+.content-champ {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.driver-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.d-info {
+    display: flex;
+    flex-direction: column;
+    width: 90px;
+    flex-shrink: 0;
+}
+
+.d-name {
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+}
+
+.d-team {
+    font-size: 8px;
+    text-transform: uppercase;
+}
+
+.d-team.rb {
+    color: #3671C6;
+}
+
+.d-team.mcl {
+    color: #FF8000;
+}
+
+.progress-container {
+    flex: 1;
+    min-width: 50px;
+    height: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.progress-fill {
+    display: block;
+    height: 100%;
+    width: 0%;
+    transition: width 1.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transform: skewX(-20deg);
+    border-radius: 0;
+}
+
+.rb-bg {
+    background-color: #3671C6;
+    box-shadow: 0 0 10px rgba(54, 113, 198, 0.6);
+}
+
+.mcl-bg {
+    background-color: #FF8000;
+    box-shadow: 0 0 10px rgba(255, 128, 0, 0.6);
+}
+
+.d-points {
+    margin-left: 10px;
+    width: 50px;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 700;
+    color: #00ffcc;
+    flex-shrink: 0;
+}
+
+.tab-btn {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #888;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(23, 23, 34, 0.9);
+    padding: 8px 15px;
+    min-width: auto;
+    min-height: auto;
+}
+
+.tab-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.tab-btn.active {
+    color: #15151F;
+    background: #ffcc00;
+    border-color: #ffcc00;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+
+.tab-btn.active::before,
+.tab-btn.active::after {
+    border-color: #15151F;
+}

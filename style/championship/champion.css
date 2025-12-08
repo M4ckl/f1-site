@@ -1,0 +1,41 @@
+.team-row-card.champion {
+    border: 2px solid #FFD700;
+    border-left: 8px solid var(--team-color);
+    background: linear-gradient(90deg,
+            color-mix(in srgb, #FFD700, var(--team-color) 70%) 0%,
+            rgba(23, 23, 34, 0.9) 100%);
+
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+    transform: scale(1.02);
+    margin-bottom: 20px;
+}
+
+.team-row-card.champion:hover {
+    transform: scale(1.03);
+}
+
+.champion .t-rank {
+    color: #FFD700;
+    opacity: 0.8;
+    text-shadow: 0 0 15px #FFD700;
+}
+
+.trophy-icon {
+    position: absolute;
+    right: -30px;
+    top: -25px;
+    width: 60px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #FFD700);
+    transform: rotate(15deg);
+    z-index: 10;
+}
+
+@media (max-width: 1300px) {
+    .trophy-icon {
+        right: 10px;
+        top: 10px;
+        width: 40px;
+        transform: rotate(0);
+    }
+}
